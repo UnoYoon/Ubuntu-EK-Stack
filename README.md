@@ -61,8 +61,10 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
 
 ## 🔄 Elasticsearch 버전 변경 (8.17.1 → 7.11.1)
 
+```
 하나의 Ubuntu 서버에서 Elasticsearch 버전을 **8.17.1에서 7.11.1로 변경**하기 위해  
 패키지를 설치한 후 덮어쓰기 방식으로 다운그레이드를 진행하였습니다.
+```
 
 ---
 
@@ -389,7 +391,7 @@ Caused by: org.apache.lucene.index.IndexFormatTooNewException: Format version is
 
 ## 6. **Review**
 
-    
+
 1. 성능 최적화
 520만 개 이상의 데이터를 관리하는 데 있어서 성능적인 측면을 고려하는 것이 중요하다고 생각합니다. 데이터 분석을 위한 쿼리나 처리 속도를 최적화하여 시스템이 원활하게 돌아갈 수 있도록 관리하는 방법을 개선해야 한다는 점을 깨닫게 되었습니다.
 
