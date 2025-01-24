@@ -104,7 +104,7 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
     </style>
 </head>
 <body>
-    <h1>🚀 기존 버전 유지하면서 Elasticsearch 7.11.1로 변경하는 방법</h1>
+    <h1>🚀 Elasticsearch 7.11.1로 다운그레이드하는 방법</h1>
     <h3>1. 현재 설치된 버전 확인</h3>
     <pre><code>dpkg -l | grep elasticsearch</code></pre>
     <p>현재 설치된 버전이 7.11.1이 아닌 경우, 아래 단계를 진행하세요.</p>
