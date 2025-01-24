@@ -1,19 +1,19 @@
 # **UbuntuEK_Card_data** 💳
 
-## 1. **프로젝트 개요: 카드 데이터 분석의 필요성과 목표**
+## 1. **프로젝트 개요: **실 카드 데이터** 분석의 필요성과 목표**
 
 ### 1.1 카드 데이터 처리 시각화 목적
 - 현대의 기업들은 방대한 양의 카드 거래 데이터를 처리하고 분석하는 데 있어 효율적인 방법을 찾고 있습니다. 
 
-- 카드 거래 데이터는 고객 행동 분석, 결제 패턴 추적, 그리고 서비스 최적화를 위한 중요한 인사이트를 제공합니다. 
+- 카드 거래 데이터는 고객 행동 분석, 결제 패턴 추적, 그리고 서비스 최적화를 위한 **중요한 인사이트**를 제공합니다. 
 
-- 약 520만 개의 데이터를 효과적으로 처리하고 시각화하는 것은 기업의 의사결정과 비즈니스 전략에 중요한 영향을 미칩니다.
+- 약 520만 개의 **실 카이 데이터**를 효과적으로 처리하고 시각화하는 것은 기업의 의사결정과 비즈니스 전략에 중요한 영향을 미칩니다.
 
 ### 1.2 기대 효과
 
-- 정확한 비즈니스 인사이트 제공: 실시간 데이터 분석을 통해 카드 사용 패턴, 고객 행동, 결제 트렌드 등을 파악합니다.
+- 유의미한 비즈니스 인사이트 제공: 실시간 데이터 분석을 통해 카드 사용 패턴, 고객 행동, 결제 트렌드 등을 파악합니다.
 
-- 빠른 의사결정 지원: 실시간 대시보드와 시각화를 통해 데이터 기반의 빠른 의사결정을 지원합니다.
+- 신속한 의사결정 지원: 실시간 대시보드와 시각화를 통해 데이터 기반의 빠른 의사결정을 지원합니다.
 
 - 운영 효율성 향상: 데이터 처리 속도와 정확도를 높여 비즈니스 운영 효율성을 향상시킵니다.
 
@@ -30,12 +30,12 @@
 <br>
 <br>
 
-### 2.2 Technical Architecture and Process Flow
+### 2.2 Technical Architecture and System Deployment
 ![_- visual selection (1)](https://github.com/user-attachments/assets/80ba4352-ab5a-4dce-b154-d2502bf3dec2)
 
 
 
-## 3. **Ubuntu 서버에 ELK 스택 연결 및 구성 과정**
+## 3. **Ubuntu 서버에 Elasicsearch & Kibana 스택 연결 및 구성 과정**
     
 ### 3.1 Ubuntu & EK Stack version 
 
@@ -59,12 +59,12 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
 }
 ```
 
-## 🔄 Elasticsearch 버전 변경 (8.17.1 → 7.11.1)
+## 🔄 **Elasticsearch 버전 변경 (8.17.1 → 7.11.1)**
 
-```
-하나의 Ubuntu 서버에서 Elasticsearch 버전을 **8.17.1에서 7.11.1로 변경**하기 위해  
+
+하나의 Ubuntu 서버에서 Elasticsearch 버전을 **8.17.1** 에서 **7.11.1**로 변경하기 위해  
 패키지를 설치한 후 덮어쓰기 방식으로 다운그레이드를 진행하였습니다.
-```
+
 
 ---
 
@@ -115,7 +115,7 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>🚀 Kibana 설치 및 설정</h1>
+    <h1>🚀 Kibana 설치 및 설정 (Kibana : 데이터 시각화 tool)</h1>
     <h3>1. Kibana 설치 준비</h2>
     <p>먼저, Kibana는 Elasticsearch와 연동되므로 Elasticsearch가 정상적으로 설치되고 실행되고 있어야 합니다. Elasticsearch 7.11.1이 실행 중이라면 Kibana 설치를 진행할 수 있습니다.</p>
     <h3>2. Kibana 7.11.1 패키지 다운로드</h2>
@@ -174,26 +174,43 @@ VirtualBox에서 설정한 포트 포워딩을 통해 **Elasticsearch**와 **Kib
 ## 4. Kibana를 통한 카드 데이터 시각화 구현
 
 ### 4.1 연령대 카드 이용금액 (1,000 won)
-![연령대 카드 이용금액](https://github.com/user-attachments/assets/13c3599b-a6f6-41e9-8ce6-365992b5e91b)
+<img src="https://github.com/user-attachments/assets/13c3599b-a6f6-41e9-8ce6-365992b5e91b" width="500">
 
-**이점:** 고객층의 연령대 분포를 확인하여, 특정 연령대에 맞춘 마케팅 전략을 세울 수 있습니다. 예를 들어, 젊은 층이 주로 사용하는 카드를 찾으면 이들을 대상으로 하는 프로모션이나 광고를 계획할 수 있습니다.
+```
+이점:  
+고객층의 연령대 분포를 확인하여, 특정 연령대에 맞춘 마케팅 전략을 세울 수 있습니다. 예를 들어, 젊은 층이 주로 사용하는 카드를 찾으면 이를 타겟으로 하는 프로모션이나 광고를 계획할 수 있습니다. 이를 통해 특정 연령대에 최적화된 맞춤형 서비스를 제공하고, 고객의 소비를 유도할 수 있는 기회를 창출할 수 있습니다.
+```
+
+---
 
 ### 4.2 성별 카드 이용금액 (1: 남성 / 2: 여성)
-![성별 카드 이용금액](https://github.com/user-attachments/assets/36f44815-3072-47cd-ab37-34e5f86c0ad2)
+<img src="https://github.com/user-attachments/assets/36f44815-3072-47cd-ab37-34e5f86c0ad2" width="500">
 
-**이점:** 고객의 성별에 따른 소비 패턴이나 선호도를 분석할 수 있습니다. 성별에 맞춘 제품 추천 또는 맞춤형 광고 전략을 세울 수 있습니다.
+```
+이점:  
+고객의 성별에 따른 소비 패턴이나 선호도를 분석함으로써, 성별에 맞춘 제품 추천이나 맞춤형 광고 전략을 수립할 수 있습니다. 예를 들어, 여성 고객을 대상으로 한 뷰티/패션 브랜드 할인 이벤트, 남성 고객을 대상으로 기술 제품 할인 이벤트를 기획하는 등의 전략을 수립할 수 있습니다. 이를 통해 성별 맞춤형 마케팅을 강화할 수 있습니다.
+```
+
+---
 
 ### 4.3 월별 카드 사용 패턴 (2022년 1분기 ~ 2023년 4분기)
-![월별 카드 사용 패턴](https://github.com/user-attachments/assets/8d47d570-8663-4f65-87ce-95261c9cccf6)
+<img src="https://github.com/user-attachments/assets/8d47d570-8663-4f65-87ce-95261c9cccf6" width="500">
 
-**이점:** 시간에 따라 카드 사용 패턴을 확인하고, 특정 시즌이나 날짜에 높은 사용률을 보인다면 해당 기간에 맞춘 프로모션을 계획할 수 있습니다.
+```
+이점:  
+시간에 따른 카드 사용 패턴을 분석함으로써, 특정 시즌이나 날짜에 높은 사용률을 보인다면 해당 기간에 맞춘 프로모션을 계획할 수 있습니다. 예를 들어, 연말 쇼핑 시즌에 맞춰 카드 사용액에 따라 포인트 두 배 적립 이벤트를 진행하거나, 특정 날짜에 맞춘 할인 혜택을 제공할 수 있습니다. 이를 통해 소비자 행동 패턴에 맞춘 전략적 프로모션을 운영할 수 있습니다.
+```
+---
 
 ### 4.4 연령대 체크카드와 신용카드 평균 사용값 비교
-![연령대 체크카드와 신용카드 평균 사용값 비교](https://github.com/user-attachments/assets/51030dc1-a74c-4e1d-98d9-5e793202a6af)
+<img src="https://github.com/user-attachments/assets/51030dc1-a74c-4e1d-98d9-5e793202a6af" width="500">
 
-**이점:** 특정 연령대에 맞는 카드를 제공하는 것이 중요해집니다. 예를 들어, 20대와 30대는 할인 혜택이 많은 신용카드를 선호할 수 있으며, 40대 이상은 체크카드를 통해 예산 관리를 중시할 수 있습니다. 이를 바탕으로 맞춤형 프로모션이나 카드를 설계할 수 있습니다.
+```
+이점:
+특정 연령대에 맞는 카드를 제공하는 것이 중요합니다. 예를 들어, 20대와 30대는 할인 혜택이 많은 신용카드를 선호할 수 있으며, 40대 이상은 체크카드를 통해 예산 관리를 중시할 수 있습니다. 이를 바탕으로 맞춤형 프로모션이나 카드를 설계하고, 각 연령대에 맞는 혜택을 제공하는 전략을 세울 수 있습니다. 고객의 니즈에 맞춘 카드를 제공하면 더 많은 고객을 유치할 수 있습니다.
+```
 
-## 시각화를 이용한 신규 카드 이벤트 아이디어
+## 시각화로 여는 카드 프로모션
 
 ### 1. 연령대별 맞춤형 프로모션
 
@@ -253,27 +270,10 @@ VirtualBox에서 설정한 포트 포워딩을 통해 **Elasticsearch**와 **Kib
 
 약 520만 개의 카드 데이터 **edu_data_F_sample.csv** 파일을 **10만 개씩** 나누기 위해, PowerShell 명령어를 사용하여 파일을 분할하였습니다.
 
-```powershell
-$inputFile = "C:\path\to\edu_data_F_sample.csv"
-$outputDir = "C:\path\to\output\folder"
-$linesPerFile = 100000
+```
+powershell
 
-# 입력 파일을 읽고 나누기
-$lines = Get-Content $inputFile
-$header = $lines[0]  # 헤더 저장
-$lines = $lines[1..$($lines.Length - 1)]  # 데이터만 추출
-
-# 데이터를 10만 개씩 나누기
-$index = 0
-foreach ($i in 0..([math]::Ceiling($lines.Length / $linesPerFile) - 1)) {
-    $startIndex = $i * $linesPerFile
-    $endIndex = [math]::Min(($i + 1) * $linesPerFile - 1, $lines.Length - 1)
-    $chunk = $lines[$startIndex..$endIndex]
-
-    # 새로운 파일 생성
-    $chunk | Set-Content -Path "$outputDir\chunk_$index.csv"
-    $index++
-}
+$i=0; Get-Content .\edu_data_F_sample.csv -Encoding UTF8 -ReadCount 100000 | %{ $i++; $_ | Out-File output-$i.csv -Encoding UTF8; Write-Host $i }
 ```
 
 ***
@@ -289,7 +289,6 @@ edu_data_F_sample.csv 파일 분할
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elasticsearch 서비스 시작 오류 해결</title>
 </head>
 <body>
     <h2>5.2. Elasticsearch 서비스 시작 오류 해결</h2>
@@ -333,7 +332,6 @@ discovery.type: single-node
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elasticsearch Keystore 포맷 오류 해결</title>
 </head>
 <body>
     <h2>5.3. 문제: Elasticsearch Keystore 포맷 오류</h1>
