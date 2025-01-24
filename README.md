@@ -78,30 +78,6 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elasticsearch 7.11.1로 변경하는 방법</title>
-    <style>
-        code {
-            background-color: #f4f4f4;
-            padding: 5px;
-            border-radius: 4px;
-        }
-        pre {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            border-radius: 4px;
-            overflow-x: auto;
-            font-family: monospace;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 <body>
     <h1>🚀 Elasticsearch 7.11.1로 다운그레이드하는 방법</h1>
@@ -135,30 +111,6 @@ ubuntu@myserver1:~$ curl -X GET "http://localhost:9200" | jq
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kibana 설치 및 설정</title>
-    <style>
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        pre {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            border-radius: 4px;
-            overflow-x: auto;
-            font-family: monospace;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 5px;
-            border-radius: 4px;
-        }
-    </style>
 </head>
 <body>
     <h1>🚀 Kibana 설치 및 설정</h1>
@@ -357,10 +309,10 @@ See "systemctl status elasticsearch.service" and "journalctl -xeu elasticsearch"
             <p>`elasticsearch.yml` 파일에서 `discovery.type` 설정을 확인하고, 적절하게 수정합니다. 예를 들어, 클러스터 구성을 단일 노드로 설정하는 방법은 다음과 같습니다:<p>
             <pre>
 네트워크 설정
-    network.host: 0.0.0.0
+network.host: 0.0.0.0
 
 클러스터 설정
-    discovery.type: single-node
+discovery.type: single-node
             </pre>
         </li>
         <li><strong>서비스 재시작</strong><br>
